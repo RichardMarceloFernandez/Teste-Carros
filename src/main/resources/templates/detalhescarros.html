@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>DETALHES DO CARRO</title>
+</head>
+<body>
+<div class="container">
+        <h1> DETALHES DO CARRO </h1>
+        
+        <h2 th:text="${carro.marca}"></h2>
+        <h3 th:text="${carro.modelo}"></h3>
+        <h3 th:text="${carro.ano}"></h3>
+        <h3 th:text="${carro.preco}"></h3>
+        <h3 th:text="${carro.cor}"></h3>
+        
+        <a class="btn btn-outline-primary" href="/carro">VOLTAR</a>
+</div>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

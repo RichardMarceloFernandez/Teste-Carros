@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>CARROS</title>
+</head>
+<body>
+
+<div class ="container">
+
+    <h1>PÁGINA INICIAL - CARROS</h1>
+
+    <a class="btn btn-outline-primary" href="/cadastroCarros"> NOVO CARRO</a>
+
+    <div class="border" th:if="${lista01 != null}"> 
+        <div class="row m-1 border-bottom" th:each="jogo : ${lista01}">
+            <div class="col-6">
+                <a th:href="${'/detalhesCarros/' + carro.id}" th:text="${carro.marcaCarro}"></a>
+            </div>  
+            <div class="col-3 border-bottom text-center">
+                <a class="btn btn-warning btn-sm" th:href="${'/editarCarro/' + carro.id}"> EDITAR</a>
+            </div>  
+            <div class="col-3 border-bottom text-center">
+                <a class="btn btn-danger btn-sm" th:href="${'/deletarCarro/' + carro.id}"> APAGAR</a>
+            </div>
+        </div>
+    </div> 
+
+    <a class="btn btn-outline-primary" href="/"> VOLTAR </a>
+
+</div>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
